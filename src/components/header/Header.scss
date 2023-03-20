@@ -86,3 +86,12 @@ header{
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    .panel-list{
+        display: none;
+    }
+    .search-input{
+        display: none;
+    }
+}

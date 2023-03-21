@@ -1,9 +1,15 @@
 import React from 'react'
 import CategoryList from '../../components/category-list/CategoryList'
+import MainProducts from '../../components/main-products/MainProducts'
 
 function Home() {
   return (
-    <CategoryList/>
+    <>
+      <main>
+        <CategoryList/>
+        <MainProducts/>
+      </main>
+    </>
   )
 }
 

@@ -4,16 +4,17 @@ import useFetchData from "../../hooks/useFetchData";
 import { Container } from "../../utils/Components";
 import "./MainProducts.scss";
 import { BsCart3 } from 'react-icons/bs'
+import loading from '../images/loading.gif'
 
 function MainProducts() {
-  const data = useFetchData("/products?offset=0&limit=20")
+  const [data, isLoading] = useFetchData("/products?offset=0&limit=20")
   console.log(data);
   return (
     <section className="main-products">
       <Container> 
       <h2 className="main-prod__title">Продукты</h2>
           <div className="main-products_wrapper">
-            {
+            {!isLoading ?
               data.map(product => 
                   <article className="product" key={product.id}>
                     <div className="product-top">
@@ -30,6 +31,8 @@ function MainProducts() {
                     </div>
                   </article>
                 )
+                :
+                <img src={loading} alt="loading"/>
             }
           </div>
       </Container>

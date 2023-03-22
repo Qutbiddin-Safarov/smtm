@@ -1,8 +1,4 @@
 header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
     background-color: #fff;
 }
 .panel-list{
@@ -30,68 +26,10 @@ header{
     }
 }
 
-.header-search{
-    background-color: #EAEAEA;
-    padding: 5px 0;
-    .search-list{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        .search-item{
-            .logo-content{
-                display: flex;
-                gap: 0 5px;
-                .logo{
-                    height: 50px;
-                    width: 50px;
-                    // color: #9a031e;
-                }
-                .logo-text{
-                    h2{
-                        font-size: 40px;
-                        font-weight: 700;
-                    }
-                    p{
-                        font-size: 12px;
-                        margin-left: 5px;
-                    }
-                }
-            }
-            .search-input{
-                 height: 40px;
-                 width: 890px;
-                 margin-left: 5px;
-                 outline: none;
-                 padding-left: 10px;
-                 font-size: 15px;
-                }
-                .search-input::placeholder{
-                   font-size: 15px;
-                }
-            .cart{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 40px;
-                width: 100px;
-                background: #fff;
-                border: 2px solid #fb8b24;
-                border-radius: 5px;
-                .cart-icon{
-                    height: 20px;
-                    width: 20px;
-                    color: black;
-                }
-            }
-        }
-    }
-}
+
 
 @media screen and (max-width: 900px) {
     .panel-list{
-        display: none;
-    }
-    .search-input{
         display: none;
     }
 }

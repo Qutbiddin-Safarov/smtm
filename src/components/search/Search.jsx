@@ -12,6 +12,7 @@ function Search() {
       <nav className="search-nav">
         <ul className="search-list">
           <li className="search-item">
+            <Link to="/" className='home-link'>
             <div className="logo-content">
               <FcElectronics className="logo" />
               <div className="logo-text">
@@ -19,6 +20,7 @@ function Search() {
                 <p>интернет магазин</p>
               </div>
             </div>
+            </Link>
           </li>
           <li className="search-item_search">
             <form action="" className='search_form'>

@@ -1,8 +1,21 @@
 .category-section{
     margin-top: 64px;
+}
+
+.category-container{
+    display: flex;
+}
+
+.categories{
+    width: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 15px 0;
+    .categories_toggle{
+        width: 100px;
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .title-box{
@@ -13,35 +26,22 @@
     margin-bottom: 64px;
 }
 .category-list{
-    display: flex;
+    margin-left: 100px;
+    width: 80%;
+    display: grid;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     gap:15px;
 }
 
 .content-box{
+    width: 200px;
     text-decoration: none;
-}
-.content-box:hover{
-    .product{
-        width: 220px;
-        height: 250px;
-         
-        img{
-            width: 200px;
-            height: 200px;
-        }
-        h3{
-            border-bottom: 2px solid #fb8b24;
-        }
-    }
+    color: black;
 }
 
 .item{
-    transition: 0.3s;
     width: 200px;
-    height: 230px;
+    height: 260px;
     background-color: #fff;
     box-shadow: 0px 0px 30px 15px rgba(201, 196, 196, 0.754);
     display: flex;
@@ -49,6 +49,7 @@
     justify-content: center;
     align-items: center;
     img{
+
         transition: 0.3s;
         width: 180px;
         height: 180px;
@@ -58,5 +59,27 @@
     h3{
         text-align: center;
         color: black;
+        margin-bottom: 32px;
     }
+}
+
+.price-cart{
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 114px;
+}
+
+.categories_set{
+    margin-top: 64px;
+    display: flex;
+    gap: 25px;
+    .item{
+        height: 230px;
+    }
+}
+
+.loading{
+    margin-top: 25% ;
+    margin-left: 40%;
 }

@@ -5,7 +5,7 @@ import { RxEnter } from "react-icons/rx";
 import { AiOutlinePlusSquare, AiFillPhone } from "react-icons/ai";
 import { Container } from "../../utils/Components";
 
-function Header() {
+const Header = () => {
     const location = useLocation();
   return location.pathname !== "/auth" && (
 

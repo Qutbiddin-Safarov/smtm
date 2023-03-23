@@ -9,7 +9,7 @@ import { BsCart3 } from "react-icons/bs";
 import { MdArrowForwardIos } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
 
-function CategoryList() {
+const CategoryList = () => {
   const [category, setCategory] = useState(0);
   const [disNon, setDisNon] = useState("none");
   const [disBl, setDisBl] = useState();
@@ -96,7 +96,7 @@ function CategoryList() {
           <div className="category-list" style={{ display: disNon }}>
             {!isLoading ? (
               data.map((category) => (
-                <Link className="content-box" key={category.id}>
+                <Link to={`/product/${category.id}`} className="content-box" key={category.id}>
                   <div className="item">
                     <img src={category.images} alt="" />
                     <h3>{category.title}</h3>

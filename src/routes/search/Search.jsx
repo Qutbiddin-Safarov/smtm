@@ -6,8 +6,8 @@ import { Container } from "../../utils/Components";
 import { v4 as uuidv4 } from "uuid";
 import "./Search.scss";
 import { instance } from "../../api/instance";
-import loading from "../../components/images/loading.gif";
-import notfound from "../../components/images/not-found.png";
+import loading from "../../assets/images/loading.gif";
+import notfound from "../../assets/images/not-found.png";
 
 const SearchProd = () => {
   const [lowerSelect, setLowerSelect] = useState("");
@@ -16,7 +16,7 @@ const SearchProd = () => {
   const { productTitle } = useParams();
   var [data, isLoading] = useFetchData(`/products/?title=${productTitle}`);
 
-  const prices = [10, 100, 1000, 10000, 100000];
+  const prices = [1,10, 100, 1000, 10000, 100000];
 
   console.log(upperSelect, lowerSelect);
 

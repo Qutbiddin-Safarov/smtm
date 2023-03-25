@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useFetchData from "../../hooks/useFetchData";
 import { Container } from "../../utils/Components";
-import loading from "../../components/images/loading.gif";
+import loading from "../../assets/images/loading.gif";
 import "./SingleProduct.scss";
 
 const SingleProduct = () => {

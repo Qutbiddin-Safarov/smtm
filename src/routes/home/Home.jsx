@@ -1,13 +1,11 @@
 import React from 'react'
-import CategoryList from '../../components/category-list/CategoryList'
-// import MainProducts from '../../components/main-products/MainProducts'
+import HomePage from '../../components/home-page/HomePage'
 
 const Home = () => {
   return (
     <>
       <main>
-        <CategoryList/>
-        {/* <MainProducts/> */}
+        <HomePage/>
       </main>
     </>
   )

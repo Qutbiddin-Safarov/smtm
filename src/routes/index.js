@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "../components/header/Header";
 import Search from "../components/search/Search";
 import SearchProd from "../routes/search/Search";
@@ -18,8 +18,8 @@ function AllRoutes() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route>
-          <Route path="/some/store" element={<StoreInfo/>}/>
-          <Route path="/some/:id" element={<Products/>}/>
+          <Route path="/store/store" element={<StoreInfo/>}/>
+          <Route path="/store/:id" element={<Products/>}/>
         </Route>
         <Route path="/auth" element={<Auth/>}/>
         <Route path="/product/:id" element={<SingleProduct/>}/>

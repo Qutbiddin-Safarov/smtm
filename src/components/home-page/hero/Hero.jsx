@@ -12,7 +12,7 @@ const Hero = () => {
                     <h1>SmTM</h1>
                     <h2>Smart.Tech.Market</h2>
                     <p>Магазин запчестей для ноутбуков, <br/> телефонов, планшетов, антирадаров <br /> и другой элкэтроники.</p>
-                    <Link to="/some/store" className='go-shop_link'>
+                    <Link to="/store/store" className='go-shop_link'>
                         <p>МАГАЗИН</p>
                     </Link>
                 </div>

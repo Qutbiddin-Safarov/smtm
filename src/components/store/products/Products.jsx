@@ -1,37 +1,60 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
 import useFetchData from "../../../hooks/useFetchData";
 import { Container } from "../../../utils/Components";
-import Store from "../Store";
-import loading from "../../../assets/images/loading.gif"
-import {AiOutlineArrowRight , AiOutlineArrowLeft} from "react-icons/ai"
+import loading from "../../../assets/images/loading.gif";
+import { BsCart3 } from "react-icons/bs";
+import "./Products.scss";
 
 const Products = () => {
-    const { id } = useParams();
-    const next = useRef();
-    const [offset, setOffset] = useState(0)
-    const [data, isLoading] = useFetchData(`/categories/1/products?offset=${offset}&limit=20`)
-    console.log(data);
-    useEffect(() => {
-        if(offset = 0){
-            
-        }
-    }, [])
+  const { id } = useParams();
+  const [data, isLoading] = useFetchData(`/categories/${id}/products`);
+  console.log(data.length / 10);
   return (
-    <section>
+    <section className="products">
       <Container>
-        <Store/>
-        <div>Products {id}</div>
-        {
-            !isLoading ? (
-                data.map(products => (
-                    <h1 key={products.id}>{products.title}</h1>
-                ))
-            ): <img src={loading} alt="loading"/>
-        }
-        <div className="pagination">
-            <Link onClick={() => setOffset(offset-20)}><AiOutlineArrowLeft/></Link>
-            <Link style={{}} onClick={() => setOffset(offset+20)}><AiOutlineArrowRight/></Link>
+        <div className="store__products">
+          <div className="switcher">
+            <h2>Категории: </h2>
+            <Link className="switch_link" to="/store/store">
+              <p>Store</p>
+            </Link>
+            <Link className="switch_link" to="/store/1">
+              <p>Одежда</p>
+            </Link>
+            <Link className="switch_link" to="/store/2">
+              <p>Часы</p>
+            </Link>
+            <Link className="switch_link" to="/store/3">
+            <p>Мебель</p>
+            </Link>
+            <Link className="switch_link" to="/store/4">
+            <p>Обувь</p>
+            </Link>
+            <Link className="switch_link" to="/store/5">
+            <p>Разное</p>
+            </Link>
+          </div>
+          <div className="category_products">
+            {!isLoading ? (
+              data.map((product) => (
+                <article className="product-box">
+                  <Link className="product__link" to={`/product/${product.id}`}>
+                    <div className="product-top">
+                      <img className="product_image" src={product.images} alt="" />
+                      <h3 key={product.id}>{product.title}</h3>
+                    </div>
+                  </Link>
+                    <div className="product_bottom">
+                      <strong>${product.price}</strong>
+                      <BsCart3 />
+                    </div>
+                </article>
+              ))
+            ) : (
+              <img className="loading_img" src={loading} alt="loading" />
+            )}
+          </div>
         </div>
       </Container>
     </section>
